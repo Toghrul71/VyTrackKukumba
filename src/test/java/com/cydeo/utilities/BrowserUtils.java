@@ -1,6 +1,7 @@
 package com.cydeo.utilities;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -76,4 +77,11 @@ public class BrowserUtils {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeToWaitInSec);
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
+
+    public static WebElement waitForVisibility(By locator, int timeout) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+
 }
