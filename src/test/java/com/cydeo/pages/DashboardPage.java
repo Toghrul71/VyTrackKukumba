@@ -23,9 +23,9 @@ public class DashboardPage {
         String moduleLocator = "//span[normalize-space()='" + module + "' and contains(@class, 'title title-level-2')]";
 
         try{
-            BrowserUtils.waitForVisibility((WebElement) By.xpath(tabLocator),10);
+            BrowserUtils.waitForVisibility(By.xpath(tabLocator),10);
             Driver.getDriver().findElement(By.xpath(tabLocator)).click();
-            BrowserUtils.waitForVisibility((WebElement) By.xpath(moduleLocator),10);
+            BrowserUtils.waitForVisibility(By.xpath(moduleLocator),10);
             Driver.getDriver().findElement(By.xpath(moduleLocator)).click();
         }catch (Exception e){
             e.printStackTrace();
