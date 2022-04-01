@@ -13,17 +13,6 @@ public class DefaultPageNumberStepDefinitions {
     DashboardPage dashboardPage=new DashboardPage();
     VehicleOdometerPage vehicleOdometerPage=new VehicleOdometerPage();
 
-    @Given("Drivers logged in using {string} and {string} to the homepage")
-    public void driversLoggedInUsingAndToTheHomepage(String username, String password) {
-        VytrackUtils.login(username,password);
-    }
-
-    @And("Click the {string} option under Fleet")
-    public void clickTheOptionUnderFleet(String string) {
-
-        dashboardPage.navigateToModule("Fleet",string);
-
-    }
 
     @Then("Verify if drivers can see the default page number as 1")
     public void verifyIfDriversCanSeeTheDefaultPageNumberAs() {
